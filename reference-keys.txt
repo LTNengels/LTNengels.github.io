@@ -1,0 +1,14 @@
+welkom
+profiel
+vaardigheden
+programmeertalen
+data-science-bioinformatica
+tools-technologie
+opleiding
+projecten
+rna-seq-analyse-project
+data-science-project
+werkervaring-optioneel
+portfolio
+talen
+overig
