@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 opdracht 4 | C_elegaanse</title>
+  <meta name="description" content="5 opdracht 4 | C_elegaanse" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 opdracht 4 | C_elegaanse" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 opdracht 4 | C_elegaanse" />
+  
+  
+  
+
+<meta name="author" content="Voornaam Achternaam" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="a.-formatieve-opdracht-rna-seq-daur2.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="welkom.html"><a href="welkom.html"><i class="fa fa-check"></i><b>1</b> Welkom</a></li>
+<li class="chapter" data-level="2" data-path="cv.html"><a href="cv.html"><i class="fa fa-check"></i><b>2</b> cv</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cv.html"><a href="cv.html#vaardigheden"><i class="fa fa-check"></i><b>2.1</b> Vaardigheden</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="cv.html"><a href="cv.html#programmeertalen"><i class="fa fa-check"></i><b>2.1.1</b> Programmeertalen</a></li>
+<li class="chapter" data-level="2.1.2" data-path="cv.html"><a href="cv.html#data-science-bioinformatica"><i class="fa fa-check"></i><b>2.1.2</b> Data Science &amp; Bioinformatica</a></li>
+<li class="chapter" data-level="2.1.3" data-path="cv.html"><a href="cv.html#tools-technologie"><i class="fa fa-check"></i><b>2.1.3</b> Tools &amp; Technologie</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="cv.html"><a href="cv.html#opleiding"><i class="fa fa-check"></i><b>2.2</b> Opleiding</a></li>
+<li class="chapter" data-level="2.3" data-path="cv.html"><a href="cv.html#projecten"><i class="fa fa-check"></i><b>2.3</b> Projecten</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="cv.html"><a href="cv.html#rna-seq-analyse-project"><i class="fa fa-check"></i><b>2.3.1</b> RNA-seq Analyse Project</a></li>
+<li class="chapter" data-level="2.3.2" data-path="cv.html"><a href="cv.html#data-science-project"><i class="fa fa-check"></i><b>2.3.2</b> Data Science Project</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="cv.html"><a href="cv.html#werkervaring-optioneel"><i class="fa fa-check"></i><b>2.4</b> Werkervaring (optioneel)</a></li>
+<li class="chapter" data-level="2.5" data-path="cv.html"><a href="cv.html#portfolio"><i class="fa fa-check"></i><b>2.5</b> Portfolio</a></li>
+<li class="chapter" data-level="2.6" data-path="cv.html"><a href="cv.html#talen"><i class="fa fa-check"></i><b>2.6</b> Talen</a></li>
+<li class="chapter" data-level="2.7" data-path="cv.html"><a href="cv.html#overig"><i class="fa fa-check"></i><b>2.7</b> Overig</a></li>
+<li class="chapter" data-level="2.8" data-path="cv.html"><a href="cv.html#droombaan"><i class="fa fa-check"></i><b>2.8</b> Droombaan</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="wat-wil-ik-leren.html"><a href="wat-wil-ik-leren.html"><i class="fa fa-check"></i><b>3</b> wat wil ik leren</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="wat-wil-ik-leren.html"><a href="wat-wil-ik-leren.html#planning"><i class="fa fa-check"></i><b>3.1</b> Planning</a></li>
+<li class="chapter" data-level="3.2" data-path="wat-wil-ik-leren.html"><a href="wat-wil-ik-leren.html#uitvoering"><i class="fa fa-check"></i><b>3.2</b> Uitvoering</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="a.-formatieve-opdracht-rna-seq-daur2.html"><a href="a.-formatieve-opdracht-rna-seq-daur2.html"><i class="fa fa-check"></i><b>4</b> 3a. Formatieve opdracht RNA-seq DAUR2</a></li>
+<li class="chapter" data-level="5" data-path="opdracht-4.html"><a href="opdracht-4.html"><i class="fa fa-check"></i><b>5</b> opdracht 4</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="opdracht-4.html"><a href="opdracht-4.html#opdracht-4a.-een-data-analyse-van-een-ander-reproduceren"><i class="fa fa-check"></i><b>5.1</b> opdracht 4a. Een data analyse van een ander reproduceren</a></li>
+<li class="chapter" data-level="5.2" data-path="opdracht-4.html"><a href="opdracht-4.html#pdracht-.-een-artikel-beoordelen-op-reproduceerbaarheid"><i class="fa fa-check"></i><b>5.2</b> pdracht . Een artikel beoordelen op reproduceerbaarheid</a></li>
+<li class="chapter" data-level="5.3" data-path="opdracht-4.html"><a href="opdracht-4.html#stappenplan-voor-een-dose-response-analyse"><i class="fa fa-check"></i><b>5.3</b> Stappenplan voor een dose-response analyse</a></li>
+<li class="chapter" data-level="5.4" data-path="opdracht-4.html"><a href="opdracht-4.html#opdracht-4-een-artikel-beoordelen-op-reproduceerbaarheid"><i class="fa fa-check"></i><b>5.4</b> opdracht 4 Een artikel beoordelen op reproduceerbaarheid</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">C_elegaanse</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="opdracht-4" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> opdracht 4<a href="opdracht-4.html#opdracht-4" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="opdracht-4a.-een-data-analyse-van-een-ander-reproduceren" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> opdracht 4a. Een data analyse van een ander reproduceren<a href="opdracht-4.html#opdracht-4a.-een-data-analyse-van-een-ander-reproduceren" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="opdracht-4.html#cb5-1" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb5-2"><a href="opdracht-4.html#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="opdracht-4.html#cb5-3" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;C:/Users/luuke/Documents/ds2project23/project/CE.LIQ.FLOW.062_Tidydata.xlsx&quot;</span>)</span>
+<span id="cb5-4"><a href="opdracht-4.html#cb5-4" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="opdracht-4.html#cb5-5" tabindex="-1"></a><span class="fu">str</span>(data)</span></code></pre></div>
+<pre><code>## tibble [360 × 34] (S3: tbl_df/tbl/data.frame)
+##  $ plateRow           : logi [1:360] NA NA NA NA NA NA ...
+##  $ plateColumn        : logi [1:360] NA NA NA NA NA NA ...
+##  $ vialNr             : num [1:360] 1 1 1 1 1 2 2 2 2 2 ...
+##  $ dropCode           : chr [1:360] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; ...
+##  $ expType            : chr [1:360] &quot;experiment&quot; &quot;experiment&quot; &quot;experiment&quot; &quot;experiment&quot; ...
+##  $ expReplicate       : num [1:360] 3 3 3 3 3 3 3 3 3 3 ...
+##  $ expName            : chr [1:360] &quot;CE.LIQ.FLOW.062&quot; &quot;CE.LIQ.FLOW.062&quot; &quot;CE.LIQ.FLOW.062&quot; &quot;CE.LIQ.FLOW.062&quot; ...
+##  $ expDate            : POSIXct[1:360], format: &quot;2020-11-30&quot; &quot;2020-11-30&quot; &quot;2020-11-30&quot; &quot;2020-11-30&quot; ...
+##  $ expResearcher      : chr [1:360] &quot;Sergio Reijnders - Ellis Herder&quot; &quot;Sergio Reijnders - Ellis Herder&quot; &quot;Sergio Reijnders - Ellis Herder&quot; &quot;Sergio Reijnders - Ellis Herder&quot; ...
+##  $ expTime            : num [1:360] 68 68 68 68 68 68 68 68 68 68 ...
+##  $ expUnit            : chr [1:360] &quot;hour&quot; &quot;hour&quot; &quot;hour&quot; &quot;hour&quot; ...
+##  $ expVolumeCounted   : num [1:360] 50 50 50 50 50 50 50 50 50 50 ...
+##  $ RawData            : num [1:360] 44 37 45 47 41 35 41 36 40 38 ...
+##  $ compCASRN          : chr [1:360] &quot;24157-81-1&quot; &quot;24157-81-1&quot; &quot;24157-81-1&quot; &quot;24157-81-1&quot; ...
+##  $ compName           : chr [1:360] &quot;2,6-diisopropylnaphthalene&quot; &quot;2,6-diisopropylnaphthalene&quot; &quot;2,6-diisopropylnaphthalene&quot; &quot;2,6-diisopropylnaphthalene&quot; ...
+##  $ compConcentration  : chr [1:360] &quot;4.99&quot; &quot;4.99&quot; &quot;4.99&quot; &quot;4.99&quot; ...
+##  $ compUnit           : chr [1:360] &quot;nM&quot; &quot;nM&quot; &quot;nM&quot; &quot;nM&quot; ...
+##  $ compDelivery       : chr [1:360] &quot;Liquid&quot; &quot;Liquid&quot; &quot;Liquid&quot; &quot;Liquid&quot; ...
+##  $ compVehicle        : chr [1:360] &quot;controlVehicleA&quot; &quot;controlVehicleA&quot; &quot;controlVehicleA&quot; &quot;controlVehicleA&quot; ...
+##  $ elegansStrain      : chr [1:360] &quot;N2&quot; &quot;N2&quot; &quot;N2&quot; &quot;N2&quot; ...
+##  $ elegansInput       : num [1:360] 25 25 25 25 25 25 25 25 25 25 ...
+##  $ bacterialStrain    : chr [1:360] &quot;OP50&quot; &quot;OP50&quot; &quot;OP50&quot; &quot;OP50&quot; ...
+##  $ bacterialTreatment : chr [1:360] &quot;heated&quot; &quot;heated&quot; &quot;heated&quot; &quot;heated&quot; ...
+##  $ bacterialOD600     : num [1:360] 0.743 0.743 0.743 0.743 0.743 0.743 0.743 0.743 0.743 0.743 ...
+##  $ bacterialConcX     : num [1:360] 8 8 8 8 8 8 8 8 8 8 ...
+##  $ bacterialVolume    : num [1:360] 300 300 300 300 300 300 300 300 300 300 ...
+##  $ bacterialVolUnit   : chr [1:360] &quot;ul&quot; &quot;ul&quot; &quot;ul&quot; &quot;ul&quot; ...
+##  $ incubationVial     : chr [1:360] &quot;1,5 glass vial&quot; &quot;1,5 glass vial&quot; &quot;1,5 glass vial&quot; &quot;1,5 glass vial&quot; ...
+##  $ incubationVolume   : num [1:360] 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 ...
+##  $ incubationUnit     : chr [1:360] &quot;ul&quot; &quot;ul&quot; &quot;ul&quot; &quot;ul&quot; ...
+##  $ incubationMethod   : chr [1:360] &quot;rockroll&quot; &quot;rockroll&quot; &quot;rockroll&quot; &quot;rockroll&quot; ...
+##  $ incubationRPM      : num [1:360] 35 35 35 35 35 35 35 35 35 35 ...
+##  $ bubble             : logi [1:360] NA NA NA NA NA NA ...
+##  $ incubateTemperature: num [1:360] 20 20 20 20 20 20 20 20 20 20 ...</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="opdracht-4.html#cb7-1" tabindex="-1"></a><span class="fu">summary</span>(data)</span></code></pre></div>
+<pre><code>##  plateRow       plateColumn        vialNr        dropCode           expType           expReplicate    expName         
+##  Mode:logical   Mode:logical   Min.   :1.000   Length:360         Length:360         Min.   :3.00   Length:360        
+##  NA&#39;s:360       NA&#39;s:360       1st Qu.:1.000   Class :character   Class :character   1st Qu.:3.00   Class :character  
+##                                Median :2.000   Mode  :character   Mode  :character   Median :3.00   Mode  :character  
+##                                Mean   :2.375                                         Mean   :3.75                     
+##                                3rd Qu.:3.000                                         3rd Qu.:3.75                     
+##                                Max.   :6.000                                         Max.   :6.00                     
+##                                                                                                                       
+##     expDate           expResearcher         expTime     expUnit          expVolumeCounted    RawData     
+##  Min.   :2020-11-30   Length:360         Min.   :68   Length:360         Min.   :50       Min.   :  0.0  
+##  1st Qu.:2020-11-30   Class :character   1st Qu.:68   Class :character   1st Qu.:50       1st Qu.: 51.5  
+##  Median :2020-11-30   Mode  :character   Median :68   Mode  :character   Median :50       Median : 72.0  
+##  Mean   :2020-11-30                      Mean   :68                      Mean   :50       Mean   : 68.1  
+##  3rd Qu.:2020-11-30                      3rd Qu.:68                      3rd Qu.:50       3rd Qu.: 88.0  
+##  Max.   :2020-11-30                      Max.   :68                      Max.   :50       Max.   :124.0  
+##                                                                                           NA&#39;s   :5      
+##   compCASRN           compName         compConcentration    compUnit         compDelivery       compVehicle       
+##  Length:360         Length:360         Length:360         Length:360         Length:360         Length:360        
+##  Class :character   Class :character   Class :character   Class :character   Class :character   Class :character  
+##  Mode  :character   Mode  :character   Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+##                                                                                                                   
+##                                                                                                                   
+##                                                                                                                   
+##                                                                                                                   
+##  elegansStrain       elegansInput bacterialStrain    bacterialTreatment bacterialOD600  bacterialConcX bacterialVolume
+##  Length:360         Min.   :25    Length:360         Length:360         Min.   :0.743   Min.   :8      Min.   :300    
+##  Class :character   1st Qu.:25    Class :character   Class :character   1st Qu.:0.743   1st Qu.:8      1st Qu.:300    
+##  Mode  :character   Median :25    Mode  :character   Mode  :character   Median :0.743   Median :8      Median :300    
+##                     Mean   :25                                          Mean   :0.743   Mean   :8      Mean   :300    
+##                     3rd Qu.:25                                          3rd Qu.:0.743   3rd Qu.:8      3rd Qu.:300    
+##                     Max.   :25                                          Max.   :0.743   Max.   :8      Max.   :300    
+##                                                                                                                       
+##  bacterialVolUnit   incubationVial     incubationVolume incubationUnit     incubationMethod   incubationRPM  bubble       
+##  Length:360         Length:360         Min.   :1000     Length:360         Length:360         Min.   :35    Mode:logical  
+##  Class :character   Class :character   1st Qu.:1000     Class :character   Class :character   1st Qu.:35    NA&#39;s:360      
+##  Mode  :character   Mode  :character   Median :1000     Mode  :character   Mode  :character   Median :35                  
+##                                        Mean   :1000                                           Mean   :35                  
+##                                        3rd Qu.:1000                                           3rd Qu.:35                  
+##                                        Max.   :1000                                           Max.   :35                  
+##                                                                                                                           
+##  incubateTemperature
+##  Min.   :20         
+##  1st Qu.:20         
+##  Median :20         
+##  Mean   :20         
+##  3rd Qu.:20         
+##  Max.   :20         
+## </code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="opdracht-4.html#cb9-1" tabindex="-1"></a><span class="fu">head</span>(data)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 34
+##   plateRow plateColumn vialNr dropCode expType    expReplicate expName    expDate             expResearcher expTime expUnit
+##   &lt;lgl&gt;    &lt;lgl&gt;        &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;      &lt;dttm&gt;              &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt;  
+## 1 NA       NA               1 a        experiment            3 CE.LIQ.FL… 2020-11-30 00:00:00 Sergio Reijn…      68 hour   
+## 2 NA       NA               1 b        experiment            3 CE.LIQ.FL… 2020-11-30 00:00:00 Sergio Reijn…      68 hour   
+## 3 NA       NA               1 c        experiment            3 CE.LIQ.FL… 2020-11-30 00:00:00 Sergio Reijn…      68 hour   
+## 4 NA       NA               1 d        experiment            3 CE.LIQ.FL… 2020-11-30 00:00:00 Sergio Reijn…      68 hour   
+## 5 NA       NA               1 e        experiment            3 CE.LIQ.FL… 2020-11-30 00:00:00 Sergio Reijn…      68 hour   
+## 6 NA       NA               2 a        experiment            3 CE.LIQ.FL… 2020-11-30 00:00:00 Sergio Reijn…      68 hour   
+## # ℹ 23 more variables: expVolumeCounted &lt;dbl&gt;, RawData &lt;dbl&gt;, compCASRN &lt;chr&gt;, compName &lt;chr&gt;, compConcentration &lt;chr&gt;,
+## #   compUnit &lt;chr&gt;, compDelivery &lt;chr&gt;, compVehicle &lt;chr&gt;, elegansStrain &lt;chr&gt;, elegansInput &lt;dbl&gt;, bacterialStrain &lt;chr&gt;,
+## #   bacterialTreatment &lt;chr&gt;, bacterialOD600 &lt;dbl&gt;, bacterialConcX &lt;dbl&gt;, bacterialVolume &lt;dbl&gt;, bacterialVolUnit &lt;chr&gt;,
+## #   incubationVial &lt;chr&gt;, incubationVolume &lt;dbl&gt;, incubationUnit &lt;chr&gt;, incubationMethod &lt;chr&gt;, incubationRPM &lt;dbl&gt;,
+## #   bubble &lt;lgl&gt;, incubateTemperature &lt;dbl&gt;</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="opdracht-4.html#cb11-1" tabindex="-1"></a>data<span class="sc">$</span>RawData <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(data<span class="sc">$</span>RawData)</span>
+<span id="cb11-2"><a href="opdracht-4.html#cb11-2" tabindex="-1"></a>data<span class="sc">$</span>compName <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(data<span class="sc">$</span>compName)</span>
+<span id="cb11-3"><a href="opdracht-4.html#cb11-3" tabindex="-1"></a>data<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(data<span class="sc">$</span>compConcentration)</span></code></pre></div>
+<pre><code>## Warning: NAs introduced by coercion</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="opdracht-4.html#cb13-1" tabindex="-1"></a>data<span class="sc">$</span>expType <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(data<span class="sc">$</span>expType)</span>
+<span id="cb13-2"><a href="opdracht-4.html#cb13-2" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="opdracht-4.html#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="opdracht-4.html#cb13-4" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="opdracht-4.html#cb13-5" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb13-6"><a href="opdracht-4.html#cb13-6" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="opdracht-4.html#cb13-7" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> compConcentration, <span class="at">y =</span> RawData,</span>
+<span id="cb13-8"><a href="opdracht-4.html#cb13-8" tabindex="-1"></a>                 <span class="at">color =</span> compName, <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
+<span id="cb13-9"><a href="opdracht-4.html#cb13-9" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> <span class="fl">0.05</span>, <span class="at">height =</span> <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb13-10"><a href="opdracht-4.html#cb13-10" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb13-11"><a href="opdracht-4.html#cb13-11" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb13-12"><a href="opdracht-4.html#cb13-12" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Concentratie (log10 schaal)&quot;</span>,</span>
+<span id="cb13-13"><a href="opdracht-4.html#cb13-13" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Aantal nakomelingen&quot;</span>,</span>
+<span id="cb13-14"><a href="opdracht-4.html#cb13-14" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Chemische stof&quot;</span>,</span>
+<span id="cb13-15"><a href="opdracht-4.html#cb13-15" tabindex="-1"></a>       <span class="at">shape =</span> <span class="st">&quot;Type experiment&quot;</span>)</span></code></pre></div>
+<pre><code>## Warning in scale_x_log10(): log-10 transformation introduced infinite values.</code></pre>
+<pre><code>## Warning: Removed 6 rows containing missing values or values outside the scale range (`geom_point()`).</code></pre>
+<p><img src="portfolio_files/figure-html/C_elegans-1.png" alt="" width="672" /></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="opdracht-4.html#cb16-1" tabindex="-1"></a>neg_control_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(data<span class="sc">$</span>RawData[data<span class="sc">$</span>expType <span class="sc">==</span> <span class="st">&quot;controlNegative&quot;</span>], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-2"><a href="opdracht-4.html#cb16-2" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="opdracht-4.html#cb16-3" tabindex="-1"></a>data<span class="sc">$</span>normalized <span class="ot">&lt;-</span> data<span class="sc">$</span>RawData <span class="sc">/</span> neg_control_mean</span>
+<span id="cb16-4"><a href="opdracht-4.html#cb16-4" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="opdracht-4.html#cb16-5" tabindex="-1"></a><span class="fu">mean</span>(data<span class="sc">$</span>normalized[data<span class="sc">$</span>expType <span class="sc">==</span> <span class="st">&quot;controlNegative&quot;</span>])</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="opdracht-4.html#cb18-1" tabindex="-1"></a><span class="co"># moet ~1 zijn</span></span>
+<span id="cb18-2"><a href="opdracht-4.html#cb18-2" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="opdracht-4.html#cb18-3" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="opdracht-4.html#cb18-4" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> compConcentration, <span class="at">y =</span> normalized,</span>
+<span id="cb18-5"><a href="opdracht-4.html#cb18-5" tabindex="-1"></a>                 <span class="at">color =</span> compName, <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
+<span id="cb18-6"><a href="opdracht-4.html#cb18-6" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> <span class="fl">0.05</span>, <span class="at">height =</span> <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb18-7"><a href="opdracht-4.html#cb18-7" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb18-8"><a href="opdracht-4.html#cb18-8" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb18-9"><a href="opdracht-4.html#cb18-9" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Concentratie (log10 schaal)&quot;</span>,</span>
+<span id="cb18-10"><a href="opdracht-4.html#cb18-10" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Genormaliseerd aantal nakomelingen&quot;</span>,</span>
+<span id="cb18-11"><a href="opdracht-4.html#cb18-11" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Chemische stof&quot;</span>,</span>
+<span id="cb18-12"><a href="opdracht-4.html#cb18-12" tabindex="-1"></a>       <span class="at">shape =</span> <span class="st">&quot;Type experiment&quot;</span>)</span></code></pre></div>
+<pre><code>## Warning in scale_x_log10(): log-10 transformation introduced infinite values.
+## Removed 6 rows containing missing values or values outside the scale range (`geom_point()`).</code></pre>
+<p><img src="portfolio_files/figure-html/C_elegans-2.png" alt="" width="672" />
+Hier moet een conclusie</p>
+</div>
+<div id="pdracht-.-een-artikel-beoordelen-op-reproduceerbaarheid" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> pdracht . Een artikel beoordelen op reproduceerbaarheid<a href="opdracht-4.html#pdracht-.-een-artikel-beoordelen-op-reproduceerbaarheid" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Tekstuele uitleg voor je verslag
+Controles in het experiment
+Negatieve controle (controlNegative):
+Wormen zonder blootstelling aan een toxische stof. Dit geeft de baseline reproductie.
+Positieve controle:
+Een stof waarvan bekend is dat deze toxisch is. Hiermee controleer je of het experiment werkt.
+Vehicle controle:
+Bevat alleen het oplosmiddel (bijv. DMSO). Hiermee controleer je of het oplosmiddel zelf geen effect heeft.
+Nut van controles
+Negatief: referentiepunt voor normale groei
+Positief: valideert experimentele gevoeligheid
+Vehicle: controleert bias door oplosmiddelen</p>
+<p>Samen zorgen ze ervoor dat effecten correct geïnterpreteerd worden.</p>
+<p>Nut van normalisatie</p>
+<p>Door te normaliseren:</p>
+<p>worden experimenten vergelijkbaar
+corrigeer je voor variatie tussen metingen
+druk je resultaten uit als relatief effect</p>
+<p>Een waarde van:</p>
+<p>1 = geen effect
+&lt;1 = remming (toxisch effect)
+&gt;1 = stimulatie</p>
+</div>
+<div id="stappenplan-voor-een-dose-response-analyse" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Stappenplan voor een dose-response analyse<a href="opdracht-4.html#stappenplan-voor-een-dose-response-analyse" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Voor het kwantificeren van het effect van de verschillende chemicaliën op de reproductie van C. elegans kan een dose-response analyse worden uitgevoerd met behulp van een log-logistisch model.</p>
+<p>Vervolgens wordt een model gefit waarin de genormaliseerde responsvariabele wordt gemodelleerd als functie van de concentratie van het chemische middel. Indien meerdere stoffen worden geanalyseerd, kan per stof een aparte curve worden geschat binnen hetzelfde model.</p>
+<p>Daarna wordt een samenvatting van het model bekeken om inzicht te krijgen in de geschatte parameters, zoals de helling van de curve en de minimale en maximale respons.</p>
+<p>Om de resultaten visueel te beoordelen, wordt een dose-response curve geplot, waarbij de concentratie doorgaans op een logaritmische schaal wordt weergegeven. Dit maakt het eenvoudiger om trends over meerdere ordes van grootte te interpreteren.</p>
+<p>Vervolgens wordt de IC50-waarde bepaald. Dit is de concentratie waarbij 50% van het maximale effect wordt waargenomen. Deze parameter is een belangrijke maat voor de toxiciteit van een stof: hoe lager de IC50, hoe sterker het effect van de stof.</p>
+<p>Ten slotte kan modeldiagnostiek worden uitgevoerd, bijvoorbeeld door de residuen te inspecteren. Dit helpt om te beoordelen of het gekozen model een goede beschrijving van de data geeft.</p>
+</div>
+<div id="opdracht-4-een-artikel-beoordelen-op-reproduceerbaarheid" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> opdracht 4 Een artikel beoordelen op reproduceerbaarheid<a href="opdracht-4.html#opdracht-4-een-artikel-beoordelen-op-reproduceerbaarheid" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Link: <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0278495" class="uri">https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0278495</a></p>
+<p>onderzoeksvraag
+Onderzoeksvraag
+De studie onderzoekt hoe influenza zich verspreidt binnen een varkenshouderij (tussen varkens onderling) en tussen varkens en mensen, en in hoeverre interventies (zoals vaccinatie of beschermingsmaatregelen) deze transmissie kunnen beperken.</p>
+<p>sammenvatting metode</p>
+<p>In deze studie wordt een stochastisch compartimenteel model ontwikkeld. Dit type model verdeelt de populatie in verschillende compartimenten en simuleert willekeurige transmissieprocessen.</p>
+<p>samenvatting resultaten</p>
+<p>Influenza zich snel kan verspreiden binnen een varkenspopulatie
+Transmissie naar mensen mogelijk is, vooral zonder beschermingsmaatregelen
+Interventies zoals vaccinatie en het dragen van beschermingsmiddelen de verspreiding aanzienlijk kunnen verminderen</p>
+<table>
+<colgroup>
+<col width="15%" />
+<col width="13%" />
+<col width="70%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Criteria</th>
+<th>Beoordeling</th>
+<th>Toelichting</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Study Purpose</td>
+<td>Ja</td>
+<td>De onderzoeksvraag staat duidelijk in de introductie: het modelleren van influenza transmissie binnen en tussen soorten</td>
+</tr>
+<tr class="even">
+<td>Data Availability Statement</td>
+<td>Ja</td>
+<td>Er is een aparte “Data Availability” sectie aanwezig</td>
+</tr>
+<tr class="odd">
+<td>Data Location</td>
+<td>Supplement / repository</td>
+<td>Data en code zijn beschikbaar via supplementen en/of externe repository</td>
+</tr>
+<tr class="even">
+<td>Study Location</td>
+<td>Ja VS</td>
+<td>De studie is gebaseerd op een varkenshouderijsetting in de Verenigde Staten</td>
+</tr>
+<tr class="odd">
+<td>Author Review</td>
+<td>Goed</td>
+<td>Professionele affiliaties en e-mailadressen aanwezig</td>
+</tr>
+<tr class="even">
+<td>Ethics Statement</td>
+<td>Ja</td>
+<td>Vermeld dat er geen direct experimenteel onderzoek op mensen/dieren is uitgevoerd modelstudie</td>
+</tr>
+<tr class="odd">
+<td>Funding Statement</td>
+<td>Ja</td>
+<td>Financiering wordt expliciet vermeld</td>
+</tr>
+<tr class="even">
+<td>Code Availability</td>
+<td>Ja</td>
+<td>R code is beschikbaar gesteld</td>
+</tr>
+</tbody>
+</table>
+<p>De data en R code van het artikel A stochastic compartmental model to simulate intra- and inter-species influenza transmission in an indoor swine farm zijn te vinden via de Data Availability sectie. Hier wordt verwezen naar de supplementary materials waarin de scripts en benodigde bestanden staan.</p>
+<p>De R code wordt gebruikt om een simulatiemodel van influenza verspreiding uit te voeren. In de code worden eerst verschillende parameters ingesteld, zoals transmissiesnelheid en hersteltijd. Daarna wordt een stochastisch model gebruikt om de verspreiding van het virus te simuleren binnen de varkenspopulatie en tussen varkens en mensen. De code draait meerdere simulaties en slaat de resultaten op. Vervolgens worden deze resultaten gevisualiseerd in grafieken, bijvoorbeeld het aantal geïnfecteerde individuen over de tijd.</p>
+<p>De leesbaarheid van de code zou ik beoordelen met een 3/5. De code is op zich te volgen, maar er staan weinig commentaarregels bij en sommige variabelen zijn niet meteen duidelijk. Daardoor kost het wat tijd om goed te begrijpen wat er precies gebeurt.</p>
+<p>Voor het reproduceren van de analyse heb ik de code en data gedownload en in een nieuw R-project gezet. Bij het uitvoeren van de code liep ik tegen een paar problemen aan. Sommige packages waren niet geïnstalleerd en moesten eerst worden toegevoegd. Daarnaast moesten een aantal bestandspaden worden aangepast zodat R de data kon vinden. Ook heb ik een set.seed() toegevoegd om de resultaten reproduceerbaar te maken, omdat het om een stochastisch model gaat.</p>
+<p>Na deze aanpassingen lukte het om een figuur (een infectiecurve) te reproduceren. De resultaten kwamen grotendeels overeen met die in het artikel, al kunnen kleine verschillen optreden door de random component in het model.</p>
+<p>De reproduceerbaarheid van de code beoordeel ik met een 3/5. De code is beschikbaar en werkt uiteindelijk wel, maar niet zonder kleine aanpassingen. Met betere documentatie en een duidelijke handleiding zou dit makkelijker zijn geweest.</p>
+<hr />
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="a.-formatieve-opdracht-rna-seq-daur2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
