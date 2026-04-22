@@ -166,9 +166,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="opdracht-4.html"><a href="opdracht-4.html"><i class="fa fa-check"></i><b>5</b> opdracht 4</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="opdracht-4.html"><a href="opdracht-4.html#opdracht-4a.-een-data-analyse-van-een-ander-reproduceren"><i class="fa fa-check"></i><b>5.1</b> opdracht 4a. Een data analyse van een ander reproduceren</a></li>
-<li class="chapter" data-level="5.2" data-path="opdracht-4.html"><a href="opdracht-4.html#pdracht-.-een-artikel-beoordelen-op-reproduceerbaarheid"><i class="fa fa-check"></i><b>5.2</b> pdracht . Een artikel beoordelen op reproduceerbaarheid</a></li>
-<li class="chapter" data-level="5.3" data-path="opdracht-4.html"><a href="opdracht-4.html#stappenplan-voor-een-dose-response-analyse"><i class="fa fa-check"></i><b>5.3</b> Stappenplan voor een dose-response analyse</a></li>
-<li class="chapter" data-level="5.4" data-path="opdracht-4.html"><a href="opdracht-4.html#opdracht-4-een-artikel-beoordelen-op-reproduceerbaarheid"><i class="fa fa-check"></i><b>5.4</b> opdracht 4 Een artikel beoordelen op reproduceerbaarheid</a></li>
+<li class="chapter" data-level="5.2" data-path="opdracht-4.html"><a href="opdracht-4.html#stappenplan-voor-een-dose-response-analyse"><i class="fa fa-check"></i><b>5.2</b> Stappenplan voor een dose-response analyse</a></li>
+<li class="chapter" data-level="5.3" data-path="opdracht-4.html"><a href="opdracht-4.html#opdracht-4-een-artikel-beoordelen-op-reproduceerbaarheid"><i class="fa fa-check"></i><b>5.3</b> opdracht 4 Een artikel beoordelen op reproduceerbaarheid</a></li>
 </ul></li>
 </ul>
 
@@ -303,47 +302,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb13-2"><a href="opdracht-4.html#cb13-2" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="opdracht-4.html#cb13-3" tabindex="-1"></a></span>
 <span id="cb13-4"><a href="opdracht-4.html#cb13-4" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="opdracht-4.html#cb13-5" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb13-6"><a href="opdracht-4.html#cb13-6" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="opdracht-4.html#cb13-7" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> compConcentration, <span class="at">y =</span> RawData,</span>
-<span id="cb13-8"><a href="opdracht-4.html#cb13-8" tabindex="-1"></a>                 <span class="at">color =</span> compName, <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
-<span id="cb13-9"><a href="opdracht-4.html#cb13-9" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> <span class="fl">0.05</span>, <span class="at">height =</span> <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb13-10"><a href="opdracht-4.html#cb13-10" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
-<span id="cb13-11"><a href="opdracht-4.html#cb13-11" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb13-12"><a href="opdracht-4.html#cb13-12" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Concentratie (log10 schaal)&quot;</span>,</span>
-<span id="cb13-13"><a href="opdracht-4.html#cb13-13" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Aantal nakomelingen&quot;</span>,</span>
-<span id="cb13-14"><a href="opdracht-4.html#cb13-14" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Chemische stof&quot;</span>,</span>
-<span id="cb13-15"><a href="opdracht-4.html#cb13-15" tabindex="-1"></a>       <span class="at">shape =</span> <span class="st">&quot;Type experiment&quot;</span>)</span></code></pre></div>
+<span id="cb13-5"><a href="opdracht-4.html#cb13-5" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<pre><code>## Want to understand how all the pieces fit together? Read R for Data Science: https://r4ds.hadley.nz/</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="opdracht-4.html#cb15-1" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> compConcentration, <span class="at">y =</span> RawData,</span>
+<span id="cb15-2"><a href="opdracht-4.html#cb15-2" tabindex="-1"></a>                 <span class="at">color =</span> compName, <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
+<span id="cb15-3"><a href="opdracht-4.html#cb15-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> <span class="fl">0.05</span>, <span class="at">height =</span> <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb15-4"><a href="opdracht-4.html#cb15-4" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb15-5"><a href="opdracht-4.html#cb15-5" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb15-6"><a href="opdracht-4.html#cb15-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Concentratie (log10 schaal)&quot;</span>,</span>
+<span id="cb15-7"><a href="opdracht-4.html#cb15-7" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Aantal nakomelingen&quot;</span>,</span>
+<span id="cb15-8"><a href="opdracht-4.html#cb15-8" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Chemische stof&quot;</span>,</span>
+<span id="cb15-9"><a href="opdracht-4.html#cb15-9" tabindex="-1"></a>       <span class="at">shape =</span> <span class="st">&quot;Type experiment&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning in scale_x_log10(): log-10 transformation introduced infinite values.</code></pre>
 <pre><code>## Warning: Removed 6 rows containing missing values or values outside the scale range (`geom_point()`).</code></pre>
 <p><img src="portfolio_files/figure-html/C_elegans-1.png" alt="" width="672" /></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="opdracht-4.html#cb16-1" tabindex="-1"></a>neg_control_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(data<span class="sc">$</span>RawData[data<span class="sc">$</span>expType <span class="sc">==</span> <span class="st">&quot;controlNegative&quot;</span>], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb16-2"><a href="opdracht-4.html#cb16-2" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="opdracht-4.html#cb16-3" tabindex="-1"></a>data<span class="sc">$</span>normalized <span class="ot">&lt;-</span> data<span class="sc">$</span>RawData <span class="sc">/</span> neg_control_mean</span>
-<span id="cb16-4"><a href="opdracht-4.html#cb16-4" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="opdracht-4.html#cb16-5" tabindex="-1"></a><span class="fu">mean</span>(data<span class="sc">$</span>normalized[data<span class="sc">$</span>expType <span class="sc">==</span> <span class="st">&quot;controlNegative&quot;</span>])</span></code></pre></div>
-<pre><code>## [1] 1</code></pre>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="opdracht-4.html#cb18-1" tabindex="-1"></a><span class="co"># moet ~1 zijn</span></span>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="opdracht-4.html#cb18-1" tabindex="-1"></a>neg_control_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(data<span class="sc">$</span>RawData[data<span class="sc">$</span>expType <span class="sc">==</span> <span class="st">&quot;controlNegative&quot;</span>], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb18-2"><a href="opdracht-4.html#cb18-2" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="opdracht-4.html#cb18-3" tabindex="-1"></a></span>
-<span id="cb18-4"><a href="opdracht-4.html#cb18-4" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> compConcentration, <span class="at">y =</span> normalized,</span>
-<span id="cb18-5"><a href="opdracht-4.html#cb18-5" tabindex="-1"></a>                 <span class="at">color =</span> compName, <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
-<span id="cb18-6"><a href="opdracht-4.html#cb18-6" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> <span class="fl">0.05</span>, <span class="at">height =</span> <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb18-7"><a href="opdracht-4.html#cb18-7" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
-<span id="cb18-8"><a href="opdracht-4.html#cb18-8" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb18-9"><a href="opdracht-4.html#cb18-9" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Concentratie (log10 schaal)&quot;</span>,</span>
-<span id="cb18-10"><a href="opdracht-4.html#cb18-10" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Genormaliseerd aantal nakomelingen&quot;</span>,</span>
-<span id="cb18-11"><a href="opdracht-4.html#cb18-11" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Chemische stof&quot;</span>,</span>
-<span id="cb18-12"><a href="opdracht-4.html#cb18-12" tabindex="-1"></a>       <span class="at">shape =</span> <span class="st">&quot;Type experiment&quot;</span>)</span></code></pre></div>
+<span id="cb18-3"><a href="opdracht-4.html#cb18-3" tabindex="-1"></a>data<span class="sc">$</span>normalized <span class="ot">&lt;-</span> data<span class="sc">$</span>RawData <span class="sc">/</span> neg_control_mean</span>
+<span id="cb18-4"><a href="opdracht-4.html#cb18-4" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="opdracht-4.html#cb18-5" tabindex="-1"></a><span class="fu">mean</span>(data<span class="sc">$</span>normalized[data<span class="sc">$</span>expType <span class="sc">==</span> <span class="st">&quot;controlNegative&quot;</span>])</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="opdracht-4.html#cb20-1" tabindex="-1"></a><span class="co"># moet ~1 zijn</span></span>
+<span id="cb20-2"><a href="opdracht-4.html#cb20-2" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="opdracht-4.html#cb20-3" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="opdracht-4.html#cb20-4" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> compConcentration, <span class="at">y =</span> normalized,</span>
+<span id="cb20-5"><a href="opdracht-4.html#cb20-5" tabindex="-1"></a>                 <span class="at">color =</span> compName, <span class="at">shape =</span> expType)) <span class="sc">+</span></span>
+<span id="cb20-6"><a href="opdracht-4.html#cb20-6" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">position =</span> <span class="fu">position_jitter</span>(<span class="at">width =</span> <span class="fl">0.05</span>, <span class="at">height =</span> <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb20-7"><a href="opdracht-4.html#cb20-7" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb20-8"><a href="opdracht-4.html#cb20-8" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb20-9"><a href="opdracht-4.html#cb20-9" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Concentratie (log10 schaal)&quot;</span>,</span>
+<span id="cb20-10"><a href="opdracht-4.html#cb20-10" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Genormaliseerd aantal nakomelingen&quot;</span>,</span>
+<span id="cb20-11"><a href="opdracht-4.html#cb20-11" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Chemische stof&quot;</span>,</span>
+<span id="cb20-12"><a href="opdracht-4.html#cb20-12" tabindex="-1"></a>       <span class="at">shape =</span> <span class="st">&quot;Type experiment&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning in scale_x_log10(): log-10 transformation introduced infinite values.
 ## Removed 6 rows containing missing values or values outside the scale range (`geom_point()`).</code></pre>
 <p><img src="portfolio_files/figure-html/C_elegans-2.png" alt="" width="672" />
-Hier moet een conclusie</p>
-</div>
-<div id="pdracht-.-een-artikel-beoordelen-op-reproduceerbaarheid" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> pdracht . Een artikel beoordelen op reproduceerbaarheid<a href="opdracht-4.html#pdracht-.-een-artikel-beoordelen-op-reproduceerbaarheid" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Tekstuele uitleg voor je verslag
-Controles in het experiment
+Conclusie:
+De dataset is correct ingelezen en de structuur van de data is grotendeels geschikt voor analyse. RawData is al numeriek en kan direct gebruikt worden, terwijl compName terecht als factor is gezet voor categorische analyses en visualisaties. De variabele compConcentration is geconverteerd van character naar numeric, maar hierbij zijn enkele NA-waarden ontstaan door niet-numerieke invoer in de oorspronkelijke data. Dit heeft beperkte invloed op de analyse, maar vereist aandacht bij verdere visualisaties. Over het algemeen is de data bruikbaar voor verdere statistische analyse en visualisatie.</p>
+<p>Controles in het experiment
 Negatieve controle (controlNegative):
 Wormen zonder blootstelling aan een toxische stof. Dit geeft de baseline reproductie.
 Positieve controle:
@@ -355,7 +351,6 @@ Negatief: referentiepunt voor normale groei
 Positief: valideert experimentele gevoeligheid
 Vehicle: controleert bias door oplosmiddelen</p>
 <p>Samen zorgen ze ervoor dat effecten correct geïnterpreteerd worden.</p>
-<p>Nut van normalisatie</p>
 <p>Door te normaliseren:</p>
 <p>worden experimenten vergelijkbaar
 corrigeer je voor variatie tussen metingen
@@ -365,8 +360,8 @@ druk je resultaten uit als relatief effect</p>
 &lt;1 = remming (toxisch effect)
 &gt;1 = stimulatie</p>
 </div>
-<div id="stappenplan-voor-een-dose-response-analyse" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Stappenplan voor een dose-response analyse<a href="opdracht-4.html#stappenplan-voor-een-dose-response-analyse" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="stappenplan-voor-een-dose-response-analyse" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Stappenplan voor een dose-response analyse<a href="opdracht-4.html#stappenplan-voor-een-dose-response-analyse" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Voor het kwantificeren van het effect van de verschillende chemicaliën op de reproductie van C. elegans kan een dose-response analyse worden uitgevoerd met behulp van een log-logistisch model.</p>
 <p>Vervolgens wordt een model gefit waarin de genormaliseerde responsvariabele wordt gemodelleerd als functie van de concentratie van het chemische middel. Indien meerdere stoffen worden geanalyseerd, kan per stof een aparte curve worden geschat binnen hetzelfde model.</p>
 <p>Daarna wordt een samenvatting van het model bekeken om inzicht te krijgen in de geschatte parameters, zoals de helling van de curve en de minimale en maximale respons.</p>
@@ -374,8 +369,8 @@ druk je resultaten uit als relatief effect</p>
 <p>Vervolgens wordt de IC50-waarde bepaald. Dit is de concentratie waarbij 50% van het maximale effect wordt waargenomen. Deze parameter is een belangrijke maat voor de toxiciteit van een stof: hoe lager de IC50, hoe sterker het effect van de stof.</p>
 <p>Ten slotte kan modeldiagnostiek worden uitgevoerd, bijvoorbeeld door de residuen te inspecteren. Dit helpt om te beoordelen of het gekozen model een goede beschrijving van de data geeft.</p>
 </div>
-<div id="opdracht-4-een-artikel-beoordelen-op-reproduceerbaarheid" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> opdracht 4 Een artikel beoordelen op reproduceerbaarheid<a href="opdracht-4.html#opdracht-4-een-artikel-beoordelen-op-reproduceerbaarheid" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="opdracht-4-een-artikel-beoordelen-op-reproduceerbaarheid" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> opdracht 4 Een artikel beoordelen op reproduceerbaarheid<a href="opdracht-4.html#opdracht-4-een-artikel-beoordelen-op-reproduceerbaarheid" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Link: <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0278495" class="uri">https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0278495</a></p>
 <p>onderzoeksvraag
 Onderzoeksvraag

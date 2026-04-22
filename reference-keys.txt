@@ -19,6 +19,5 @@ uitvoering
 a.-formatieve-opdracht-rna-seq-daur2
 opdracht-4
 opdracht-4a.-een-data-analyse-van-een-ander-reproduceren
-pdracht-.-een-artikel-beoordelen-op-reproduceerbaarheid
 stappenplan-voor-een-dose-response-analyse
 opdracht-4-een-artikel-beoordelen-op-reproduceerbaarheid
