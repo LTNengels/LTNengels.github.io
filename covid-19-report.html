@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | COVID-19 Weekly Report</title>
-  <meta name="description" content="Page not found | COVID-19 Weekly Report" />
+  <title>9 COVID-19 Report | COVID-19 Weekly Report</title>
+  <meta name="description" content="9 COVID-19 Report | COVID-19 Weekly Report" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | COVID-19 Weekly Report" />
+  <meta property="og:title" content="9 COVID-19 Report | COVID-19 Weekly Report" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | COVID-19 Weekly Report" />
+  <meta name="twitter:title" content="9 COVID-19 Report | COVID-19 Weekly Report" />
   
   
   
@@ -29,7 +29,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="referenties.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -218,18 +218,144 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="covid-19-report" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> COVID-19 Report<a href="covid-19-report.html#covid-19-report" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="parameters" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> parameters<a href="covid-19-report.html#parameters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Land: France
+Jaar: 2020
+Maanden: 10, 11, 12</p>
+<hr />
+</div>
+<div id="data-inladen" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Data inladen<a href="covid-19-report.html#data-inladen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+</div>
+<div id="data-voorbereiden-met-maanden-filter" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Data voorbereiden (met maanden-filter)<a href="covid-19-report.html#data-voorbereiden-met-maanden-filter" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="covid-19-report.html#cb29-1" tabindex="-1"></a>filtered_data <span class="ot">&lt;-</span> covid_data <span class="sc">%&gt;%</span></span>
+<span id="cb29-2"><a href="covid-19-report.html#cb29-2" tabindex="-1"></a>  <span class="fu">filter</span>(country <span class="sc">==</span> params<span class="sc">$</span>land) <span class="sc">%&gt;%</span></span>
+<span id="cb29-3"><a href="covid-19-report.html#cb29-3" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb29-4"><a href="covid-19-report.html#cb29-4" tabindex="-1"></a>    <span class="at">year =</span> <span class="fu">as.numeric</span>(<span class="fu">str_sub</span>(year_week, <span class="dv">1</span>, <span class="dv">4</span>)),</span>
+<span id="cb29-5"><a href="covid-19-report.html#cb29-5" tabindex="-1"></a>    <span class="at">week =</span> <span class="fu">as.numeric</span>(<span class="fu">str_remove</span>(year_week, <span class="st">&quot;.*-&quot;</span>)),</span>
+<span id="cb29-6"><a href="covid-19-report.html#cb29-6" tabindex="-1"></a>    </span>
+<span id="cb29-7"><a href="covid-19-report.html#cb29-7" tabindex="-1"></a>    <span class="co"># week → datum → maand</span></span>
+<span id="cb29-8"><a href="covid-19-report.html#cb29-8" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">as.Date</span>(<span class="fu">paste</span>(year, week, <span class="dv">1</span>, <span class="at">sep =</span> <span class="st">&quot;-&quot;</span>), <span class="st">&quot;%Y-%U-%u&quot;</span>),</span>
+<span id="cb29-9"><a href="covid-19-report.html#cb29-9" tabindex="-1"></a>    <span class="at">month =</span> <span class="fu">as.numeric</span>(<span class="fu">format</span>(date, <span class="st">&quot;%m&quot;</span>)),</span>
+<span id="cb29-10"><a href="covid-19-report.html#cb29-10" tabindex="-1"></a>    </span>
+<span id="cb29-11"><a href="covid-19-report.html#cb29-11" tabindex="-1"></a>    <span class="at">weekly_count =</span> <span class="fu">as.numeric</span>(weekly_count)</span>
+<span id="cb29-12"><a href="covid-19-report.html#cb29-12" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb29-13"><a href="covid-19-report.html#cb29-13" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb29-14"><a href="covid-19-report.html#cb29-14" tabindex="-1"></a>    year <span class="sc">==</span> params<span class="sc">$</span>jaar,</span>
+<span id="cb29-15"><a href="covid-19-report.html#cb29-15" tabindex="-1"></a>    month <span class="sc">%in%</span> params<span class="sc">$</span>maanden,</span>
+<span id="cb29-16"><a href="covid-19-report.html#cb29-16" tabindex="-1"></a>    <span class="sc">!</span><span class="fu">is.na</span>(weekly_count)</span>
+<span id="cb29-17"><a href="covid-19-report.html#cb29-17" tabindex="-1"></a>  )</span></code></pre></div>
+<pre><code>## Warning: There were 2 warnings in `mutate()`.
+## The first warning was:
+## ℹ In argument: `date = as.Date(paste(year, week, 1, sep = &quot;-&quot;), &quot;%Y-%U-%u&quot;)`.
+## Caused by warning in `strptime()`:
+## ! (0-based) yday 369 in year 2020 is invalid
+## ℹ Run `dplyr::last_dplyr_warnings()` to see the 1 remaining warning.</code></pre>
+<hr />
+</div>
+<div id="check-data" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Check data<a href="covid-19-report.html#check-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="covid-19-report.html#cb31-1" tabindex="-1"></a><span class="fu">head</span>(filtered_data)</span></code></pre></div>
+<pre><code>##   country country_code continent population indicator weekly_count year_week rate_14_day cumulative_count         source
+## 1  France          FRA    Europe   67871925     cases        76953   2020-40    223.8142           488926 TESSy COVID-19
+## 2  France          FRA    Europe   67871925     cases       117742   2020-41    286.8565           606668 TESSy COVID-19
+## 3  France          FRA    Europe   67871925     cases       169382   2020-42    423.0379           776050 TESSy COVID-19
+## 4  France          FRA    Europe   67871925     cases       262993   2020-43    637.0454          1039043 TESSy COVID-19
+## 5  France          FRA    Europe   67871925     cases       334606   2020-44    880.4804          1373649 TESSy COVID-19
+## 6  France          FRA    Europe   67871925     cases       304647   2020-45    941.8519          1678296 TESSy COVID-19
+##   note year week       date month
+## 1   NA 2020   40 2020-10-05    10
+## 2   NA 2020   41 2020-10-12    10
+## 3   NA 2020   42 2020-10-19    10
+## 4   NA 2020   43 2020-10-26    10
+## 5   NA 2020   44 2020-11-02    11
+## 6   NA 2020   45 2020-11-09    11</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="covid-19-report.html#cb33-1" tabindex="-1"></a><span class="fu">nrow</span>(filtered_data)</span></code></pre></div>
+<pre><code>## [1] 26</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="covid-19-report.html#cb35-1" tabindex="-1"></a>filtered_data <span class="sc">%&gt;%</span> <span class="fu">count</span>(indicator)</span></code></pre></div>
+<pre><code>##   indicator  n
+## 1     cases 13
+## 2    deaths 13</code></pre>
+<hr />
+</div>
+<div id="covid-cases" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> COVID Cases<a href="covid-19-report.html#covid-cases" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="covid-19-report.html#cb37-1" tabindex="-1"></a>cases_data <span class="ot">&lt;-</span> filtered_data <span class="sc">%&gt;%</span></span>
+<span id="cb37-2"><a href="covid-19-report.html#cb37-2" tabindex="-1"></a>  <span class="fu">filter</span>(indicator <span class="sc">==</span> <span class="st">&quot;cases&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb37-3"><a href="covid-19-report.html#cb37-3" tabindex="-1"></a>  <span class="fu">arrange</span>(week)</span>
+<span id="cb37-4"><a href="covid-19-report.html#cb37-4" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="covid-19-report.html#cb37-5" tabindex="-1"></a><span class="fu">ggplot</span>(cases_data, <span class="fu">aes</span>(<span class="at">x =</span> week, <span class="at">y =</span> weekly_count)) <span class="sc">+</span></span>
+<span id="cb37-6"><a href="covid-19-report.html#cb37-6" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb37-7"><a href="covid-19-report.html#cb37-7" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb37-8"><a href="covid-19-report.html#cb37-8" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb37-9"><a href="covid-19-report.html#cb37-9" tabindex="-1"></a>    <span class="at">title =</span> <span class="fu">paste</span>(<span class="st">&quot;Weekly COVID cases in&quot;</span>, params<span class="sc">$</span>land),</span>
+<span id="cb37-10"><a href="covid-19-report.html#cb37-10" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Week&quot;</span>,</span>
+<span id="cb37-11"><a href="covid-19-report.html#cb37-11" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Cases&quot;</span></span>
+<span id="cb37-12"><a href="covid-19-report.html#cb37-12" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb37-13"><a href="covid-19-report.html#cb37-13" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="portfolio_files/figure-html/COVID%20Cases-1.png" alt="" width="672" /></p>
+<hr />
+</div>
+<div id="covid-deaths" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> COVID Deaths<a href="covid-19-report.html#covid-deaths" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="covid-19-report.html#cb38-1" tabindex="-1"></a>deaths_data <span class="ot">&lt;-</span> filtered_data <span class="sc">%&gt;%</span></span>
+<span id="cb38-2"><a href="covid-19-report.html#cb38-2" tabindex="-1"></a>  <span class="fu">filter</span>(indicator <span class="sc">==</span> <span class="st">&quot;deaths&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb38-3"><a href="covid-19-report.html#cb38-3" tabindex="-1"></a>  <span class="fu">arrange</span>(week)</span>
+<span id="cb38-4"><a href="covid-19-report.html#cb38-4" tabindex="-1"></a></span>
+<span id="cb38-5"><a href="covid-19-report.html#cb38-5" tabindex="-1"></a><span class="fu">ggplot</span>(deaths_data, <span class="fu">aes</span>(<span class="at">x =</span> week, <span class="at">y =</span> weekly_count)) <span class="sc">+</span></span>
+<span id="cb38-6"><a href="covid-19-report.html#cb38-6" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb38-7"><a href="covid-19-report.html#cb38-7" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb38-8"><a href="covid-19-report.html#cb38-8" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb38-9"><a href="covid-19-report.html#cb38-9" tabindex="-1"></a>    <span class="at">title =</span> <span class="fu">paste</span>(<span class="st">&quot;Weekly COVID deaths in&quot;</span>, params<span class="sc">$</span>land),</span>
+<span id="cb38-10"><a href="covid-19-report.html#cb38-10" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Week&quot;</span>,</span>
+<span id="cb38-11"><a href="covid-19-report.html#cb38-11" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Deaths&quot;</span></span>
+<span id="cb38-12"><a href="covid-19-report.html#cb38-12" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb38-13"><a href="covid-19-report.html#cb38-13" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="portfolio_files/figure-html/COVID%20Deaths-1.png" alt="" width="672" /></p>
+<hr />
+</div>
+<div id="samenvatting" class="section level2 hasAnchor" number="9.7">
+<h2><span class="header-section-number">9.7</span> Samenvatting<a href="covid-19-report.html#samenvatting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="covid-19-report.html#cb39-1" tabindex="-1"></a><span class="fu">summary</span>(filtered_data)</span></code></pre></div>
+<pre><code>##    country          country_code        continent           population        indicator          weekly_count   
+##  Length:26          Length:26          Length:26          Min.   :67871925   Length:26          Min.   :   604  
+##  Class :character   Class :character   Class :character   1st Qu.:67871925   Class :character   1st Qu.:  3491  
+##  Mode  :character   Mode  :character   Mode  :character   Median :67871925   Mode  :character   Median : 38873  
+##                                                           Mean   :67871925                      Mean   : 77376  
+##                                                           3rd Qu.:67871925                      3rd Qu.:110873  
+##                                                           Max.   :67871925                      Max.   :334606  
+##   year_week          rate_14_day     cumulative_count     source            note              year           week   
+##  Length:26          Min.   : 17.44   Min.   :  22364   Length:26          Mode:logical   Min.   :2020   Min.   :40  
+##  Class :character   1st Qu.:108.02   1st Qu.:  40734   Class :character   NA&#39;s:26        1st Qu.:2020   1st Qu.:43  
+##  Mode  :character   Median :192.69   Median : 276419   Mode  :character                  Median :2020   Median :46  
+##                     Mean   :268.99   Mean   : 822119                                     Mean   :2020   Mean   :46  
+##                     3rd Qu.:286.84   3rd Qu.:1812050                                     3rd Qu.:2020   3rd Qu.:49  
+##                     Max.   :941.85   Max.   :2381590                                     Max.   :2020   Max.   :52  
+##       date                month   
+##  Min.   :2020-10-05   Min.   :10  
+##  1st Qu.:2020-10-26   1st Qu.:10  
+##  Median :2020-11-16   Median :11  
+##  Mean   :2020-11-16   Mean   :11  
+##  3rd Qu.:2020-12-07   3rd Qu.:12  
+##  Max.   :2020-12-28   Max.   :12</code></pre>
+</div>
+<div id="fimpje-uitleg" class="section level2 hasAnchor" number="9.8">
+<h2><span class="header-section-number">9.8</span> fimpje uitleg<a href="covid-19-report.html#fimpje-uitleg" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://youtu.be/dkydll9U650" class="uri">https://youtu.be/dkydll9U650</a></p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="referenties.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
