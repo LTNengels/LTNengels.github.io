@@ -24,6 +24,7 @@ uitvoering
 stap-1-bibliotheken-importeren
 stap-3-preprocessing
 stap-4-segmentatie
+voorbeeld-images
 stap-5-feature-extractie
 stap-6-machine-learning-trainen-op-een-dataset
 stap-7-voorspelling-op-nieuwe-afbeeldingen

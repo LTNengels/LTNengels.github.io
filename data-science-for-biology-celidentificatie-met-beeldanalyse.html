@@ -172,10 +172,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.3.1" data-path="data-science-for-biology-celidentificatie-met-beeldanalyse.html"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-1-bibliotheken-importeren"><i class="fa fa-check"></i><b>3.3.1</b> Stap 1 – Bibliotheken importeren</a></li>
 <li class="chapter" data-level="3.3.2" data-path="data-science-for-biology-celidentificatie-met-beeldanalyse.html"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-3-preprocessing"><i class="fa fa-check"></i><b>3.3.2</b> Stap 3 – Preprocessing</a></li>
 <li class="chapter" data-level="3.3.3" data-path="data-science-for-biology-celidentificatie-met-beeldanalyse.html"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-4-segmentatie"><i class="fa fa-check"></i><b>3.3.3</b> Stap 4 – Segmentatie</a></li>
-<li class="chapter" data-level="3.3.4" data-path="data-science-for-biology-celidentificatie-met-beeldanalyse.html"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-5-feature-extractie"><i class="fa fa-check"></i><b>3.3.4</b> Stap 5 – Feature extractie</a></li>
-<li class="chapter" data-level="3.3.5" data-path="data-science-for-biology-celidentificatie-met-beeldanalyse.html"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-6-machine-learning-trainen-op-een-dataset"><i class="fa fa-check"></i><b>3.3.5</b> Stap 6 – Machine learning: trainen op een dataset</a></li>
-<li class="chapter" data-level="3.3.6" data-path="data-science-for-biology-celidentificatie-met-beeldanalyse.html"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-7-voorspelling-op-nieuwe-afbeeldingen"><i class="fa fa-check"></i><b>3.3.6</b> Stap 7 – Voorspelling op nieuwe afbeeldingen</a></li>
-<li class="chapter" data-level="3.3.7" data-path="data-science-for-biology-celidentificatie-met-beeldanalyse.html"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#resultaat"><i class="fa fa-check"></i><b>3.3.7</b> Resultaat</a></li>
+<li class="chapter" data-level="3.3.4" data-path="data-science-for-biology-celidentificatie-met-beeldanalyse.html"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#voorbeeld-images"><i class="fa fa-check"></i><b>3.3.4</b> voorbeeld images</a></li>
+<li class="chapter" data-level="3.3.5" data-path="data-science-for-biology-celidentificatie-met-beeldanalyse.html"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-5-feature-extractie"><i class="fa fa-check"></i><b>3.3.5</b> Stap 5 – Feature extractie</a></li>
+<li class="chapter" data-level="3.3.6" data-path="data-science-for-biology-celidentificatie-met-beeldanalyse.html"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-6-machine-learning-trainen-op-een-dataset"><i class="fa fa-check"></i><b>3.3.6</b> Stap 6 – Machine learning: trainen op een dataset</a></li>
+<li class="chapter" data-level="3.3.7" data-path="data-science-for-biology-celidentificatie-met-beeldanalyse.html"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-7-voorspelling-op-nieuwe-afbeeldingen"><i class="fa fa-check"></i><b>3.3.7</b> Stap 7 – Voorspelling op nieuwe afbeeldingen</a></li>
+<li class="chapter" data-level="3.3.8" data-path="data-science-for-biology-celidentificatie-met-beeldanalyse.html"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#resultaat"><i class="fa fa-check"></i><b>3.3.8</b> Resultaat</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="data-science-for-biology-celidentificatie-met-beeldanalyse.html"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#conclusie"><i class="fa fa-check"></i><b>3.4</b> Conclusie</a></li>
 </ul></li>
@@ -219,6 +220,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="data-science-for-biology-celidentificatie-met-beeldanalyse" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">3</span> Data Science for Biology – Celidentificatie met Beeldanalyse<a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#data-science-for-biology-celidentificatie-met-beeldanalyse" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb1-1" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-2"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb1-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb1-3" tabindex="-1"></a><span class="fu">library</span>(knitr)</span></code></pre></div>
 <div id="wat-wil-ik-leren" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Wat wil ik leren?<a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#wat-wil-ik-leren" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Voor mijn Data Science for Biology-project heb ik gekozen voor het automatisch identificeren van cellen met behulp van beeldanalyse. Daarvoor maak ik gebruik van tools zoals OpenCV, scikit-image en Cellpose. Deze keuze sluit aan bij mijn interesse in een toekomstige stage of carrière binnen bio-informatica of medische data-analyse, waar beelddata steeds belangrijker wordt — bijvoorbeeld in diagnostiek en kankeronderzoek.</p>
@@ -251,109 +255,118 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="stap-1-bibliotheken-importeren" class="section level3 hasAnchor" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> Stap 1 – Bibliotheken importeren<a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-1-bibliotheken-importeren" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Allereerst heb ik geleerd hoe ik Python gebruik om afbeeldingen te verwerken. De benodigde bibliotheken worden als volgt geïmporteerd:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb1-1" tabindex="-1"></a><span class="im">import</span> cv2</span>
-<span id="cb1-2"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb1-2" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb1-3" tabindex="-1"></a><span class="im">import</span> joblib</span>
-<span id="cb1-4"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb1-4" tabindex="-1"></a><span class="im">from</span> skimage <span class="im">import</span> filters</span>
-<span id="cb1-5"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb1-5" tabindex="-1"></a><span class="im">from</span> skimage.measure <span class="im">import</span> regionprops, label</span>
-<span id="cb1-6"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb1-6" tabindex="-1"></a><span class="im">from</span> skimage.feature <span class="im">import</span> graycomatrix, graycoprops</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb2-1" tabindex="-1"></a><span class="im">import</span> cv2</span>
+<span id="cb2-2"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb2-2" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb2-3" tabindex="-1"></a><span class="im">import</span> joblib</span>
+<span id="cb2-4"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb2-4" tabindex="-1"></a><span class="im">from</span> skimage <span class="im">import</span> filters</span>
+<span id="cb2-5"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb2-5" tabindex="-1"></a><span class="im">from</span> skimage.measure <span class="im">import</span> regionprops, label</span>
+<span id="cb2-6"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb2-6" tabindex="-1"></a><span class="im">from</span> skimage.feature <span class="im">import</span> graycomatrix, graycoprops</span></code></pre></div>
 <p>gebruikte dataset: <a href="https://www.kaggle.com/datasets/truthisneverlinear/bach-breast-cancer-histology-images/data" class="uri">https://www.kaggle.com/datasets/truthisneverlinear/bach-breast-cancer-histology-images/data</a>
 ### Stap 2 – Afbeelding laden
 De microscopische afbeelding wordt ingeladen als een grijswaardenafbeelding:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb2-1" tabindex="-1"></a>image_path <span class="op">=</span> <span class="vs">r&quot;C:</span><span class="er">\</span><span class="vs">Users</span><span class="er">\</span><span class="vs">luuke</span><span class="er">\</span><span class="vs">PycharmProjects</span><span class="er">\</span><span class="vs">PythonProject</span><span class="dv">\s</span><span class="vs">crips</span><span class="ch">\t</span><span class="vs">est</span><span class="ch">\t</span><span class="vs">est1</span><span class="dv">.</span><span class="vs">tif&quot;</span></span>
-<span id="cb2-2"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb2-2" tabindex="-1"></a>image <span class="op">=</span> cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)</span>
-<span id="cb2-3"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb2-3" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb2-4" tabindex="-1"></a><span class="cf">if</span> image <span class="kw">is</span> <span class="va">None</span>:</span>
-<span id="cb2-5"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb2-5" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="st">&quot;Afbeelding niet gevonden&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb3-1" tabindex="-1"></a>image_path <span class="op">=</span> <span class="vs">r&quot;C:</span><span class="er">\</span><span class="vs">Users</span><span class="er">\</span><span class="vs">luuke</span><span class="er">\</span><span class="vs">PycharmProjects</span><span class="er">\</span><span class="vs">PythonProject</span><span class="dv">\s</span><span class="vs">crips</span><span class="ch">\t</span><span class="vs">est</span><span class="ch">\t</span><span class="vs">est1</span><span class="dv">.</span><span class="vs">tif&quot;</span></span>
+<span id="cb3-2"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb3-2" tabindex="-1"></a>image <span class="op">=</span> cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)</span>
+<span id="cb3-3"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb3-3" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb3-4" tabindex="-1"></a><span class="cf">if</span> image <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb3-5"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb3-5" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="st">&quot;Afbeelding niet gevonden&quot;</span>)</span></code></pre></div>
 </div>
 <div id="stap-3-preprocessing" class="section level3 hasAnchor" number="3.3.2">
 <h3><span class="header-section-number">3.3.2</span> Stap 3 – Preprocessing<a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-3-preprocessing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Om de kwaliteit van de afbeelding te verbeteren, wordt eerst ruis verwijderd met een Gaussiaanse blur. Daarna wordt een drempelwaarde (via de Otsu-methode) gebruikt om cellen te scheiden van de achtergrond:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb3-1" tabindex="-1"></a>blur <span class="op">=</span> cv2.GaussianBlur(image, (<span class="dv">5</span>, <span class="dv">5</span>), <span class="dv">0</span>)</span>
-<span id="cb3-2"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb3-2" tabindex="-1"></a>thresh <span class="op">=</span> filters.threshold_otsu(blur)</span>
-<span id="cb3-3"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb3-3" tabindex="-1"></a>binary <span class="op">=</span> blur <span class="op">&gt;</span> thresh</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb4-1" tabindex="-1"></a>blur <span class="op">=</span> cv2.GaussianBlur(image, (<span class="dv">5</span>, <span class="dv">5</span>), <span class="dv">0</span>)</span>
+<span id="cb4-2"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb4-2" tabindex="-1"></a>thresh <span class="op">=</span> filters.threshold_otsu(blur)</span>
+<span id="cb4-3"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb4-3" tabindex="-1"></a>binary <span class="op">=</span> blur <span class="op">&gt;</span> thresh</span></code></pre></div>
 </div>
 <div id="stap-4-segmentatie" class="section level3 hasAnchor" number="3.3.3">
 <h3><span class="header-section-number">3.3.3</span> Stap 4 – Segmentatie<a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-4-segmentatie" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>De binaire afbeelding wordt gelabeld, zodat elke afzonderlijke cel een uniek nummer krijgt:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb4-1" tabindex="-1"></a>label_img <span class="op">=</span> label(binary)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-1" tabindex="-1"></a>label_img <span class="op">=</span> label(binary)</span></code></pre></div>
 </div>
-<div id="stap-5-feature-extractie" class="section level3 hasAnchor" number="3.3.4">
-<h3><span class="header-section-number">3.3.4</span> Stap 5 – Feature extractie<a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-5-feature-extractie" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="voorbeeld-images" class="section level3 hasAnchor" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> voorbeeld images<a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#voorbeeld-images" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="opdracht3_foto/binarycancer.jpg" alt="" width="45%" /><img src="opdracht3_foto/blurredcancer.jpg" alt="" width="45%" /></p>
+<p>deze twee fotos laten de verwerkerte cancer images zien die gebruikt worden bij feature extractie
+<img src="opdracht3_foto/binary.jpg" alt="" width="45%" /><img src="opdracht3_foto/blurred.jpg" alt="" width="45%" /></p>
+<p>deze twee fotos laten de verwerkerte geen cancer images zien die gebruikt worden bij feature extractie</p>
+</div>
+<div id="stap-5-feature-extractie" class="section level3 hasAnchor" number="3.3.5">
+<h3><span class="header-section-number">3.3.5</span> Stap 5 – Feature extractie<a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-5-feature-extractie" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Per cel worden meerdere kenmerken berekend, zoals oppervlakte, omtrek, intensiteit, eccentrische vorm, soliditeit en textuurkenmerken (via een GLCM-matrix). Deze kenmerken beschrijven de eigenschappen van elke cel en vormen de basis voor classificatie:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-1" tabindex="-1"></a>features <span class="op">=</span> []</span>
-<span id="cb5-2"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-2" tabindex="-1"></a>regions <span class="op">=</span> <span class="bu">list</span>(regionprops(label_img, intensity_image<span class="op">=</span>blur))</span>
-<span id="cb5-3"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-3" tabindex="-1"></a>areas <span class="op">=</span> [r.area <span class="cf">for</span> r <span class="kw">in</span> regions <span class="cf">if</span> r.area <span class="op">&gt;</span> <span class="dv">50</span>]</span>
-<span id="cb5-4"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-4" tabindex="-1"></a>size_variance <span class="op">=</span> np.var(areas) <span class="cf">if</span> <span class="bu">len</span>(areas) <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="dv">0</span></span>
-<span id="cb5-5"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-5" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-6" tabindex="-1"></a><span class="cf">for</span> region <span class="kw">in</span> regions:</span>
-<span id="cb5-7"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-7" tabindex="-1"></a>    <span class="cf">if</span> region.area <span class="op">&lt;</span> <span class="dv">50</span>:</span>
-<span id="cb5-8"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-8" tabindex="-1"></a>        <span class="cf">continue</span></span>
-<span id="cb5-9"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-9" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-10" tabindex="-1"></a>    area <span class="op">=</span> region.area</span>
-<span id="cb5-11"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-11" tabindex="-1"></a>    perimeter <span class="op">=</span> region.perimeter</span>
-<span id="cb5-12"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-12" tabindex="-1"></a>    shape_irregularity <span class="op">=</span> (perimeter<span class="op">**</span><span class="dv">2</span>) <span class="op">/</span> (<span class="dv">4</span> <span class="op">*</span> np.pi <span class="op">*</span> area) <span class="cf">if</span> area <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="dv">0</span></span>
-<span id="cb5-13"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-13" tabindex="-1"></a>    intensity <span class="op">=</span> region.intensity_mean</span>
-<span id="cb5-14"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-14" tabindex="-1"></a>    eccentricity <span class="op">=</span> region.eccentricity</span>
-<span id="cb5-15"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-15" tabindex="-1"></a>    solidity <span class="op">=</span> region.solidity</span>
-<span id="cb5-16"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-16" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-17" tabindex="-1"></a>    minr, minc, maxr, maxc <span class="op">=</span> region.bbox</span>
-<span id="cb5-18"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-18" tabindex="-1"></a>    patch <span class="op">=</span> blur[minr:maxr, minc:maxc]</span>
-<span id="cb5-19"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-19" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-20" tabindex="-1"></a>    <span class="cf">if</span> patch.size <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb5-21"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-21" tabindex="-1"></a>        contrast <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb5-22"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-22" tabindex="-1"></a>        homogeneity <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb5-23"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-23" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb5-24"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-24" tabindex="-1"></a>        patch <span class="op">=</span> patch.astype(np.uint8)</span>
-<span id="cb5-25"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-25" tabindex="-1"></a>        glcm <span class="op">=</span> graycomatrix(patch, distances<span class="op">=</span>[<span class="dv">1</span>], angles<span class="op">=</span>[<span class="dv">0</span>],</span>
-<span id="cb5-26"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-26" tabindex="-1"></a>                            levels<span class="op">=</span><span class="dv">256</span>, symmetric<span class="op">=</span><span class="va">True</span>, normed<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb5-27"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-27" tabindex="-1"></a>        contrast <span class="op">=</span> graycoprops(glcm, <span class="st">&#39;contrast&#39;</span>)[<span class="dv">0</span>, <span class="dv">0</span>]</span>
-<span id="cb5-28"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-28" tabindex="-1"></a>        homogeneity <span class="op">=</span> graycoprops(glcm, <span class="st">&#39;homogeneity&#39;</span>)[<span class="dv">0</span>, <span class="dv">0</span>]</span>
-<span id="cb5-29"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-29" tabindex="-1"></a></span>
-<span id="cb5-30"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-30" tabindex="-1"></a>    f <span class="op">=</span> [area, perimeter, intensity, eccentricity, solidity,</span>
-<span id="cb5-31"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-31" tabindex="-1"></a>         shape_irregularity, contrast, homogeneity, size_variance]</span>
-<span id="cb5-32"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb5-32" tabindex="-1"></a>    features.append(f)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-1" tabindex="-1"></a>features <span class="op">=</span> []</span>
+<span id="cb6-2"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-2" tabindex="-1"></a>regions <span class="op">=</span> <span class="bu">list</span>(regionprops(label_img, intensity_image<span class="op">=</span>blur))</span>
+<span id="cb6-3"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-3" tabindex="-1"></a>areas <span class="op">=</span> [r.area <span class="cf">for</span> r <span class="kw">in</span> regions <span class="cf">if</span> r.area <span class="op">&gt;</span> <span class="dv">50</span>]</span>
+<span id="cb6-4"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-4" tabindex="-1"></a>size_variance <span class="op">=</span> np.var(areas) <span class="cf">if</span> <span class="bu">len</span>(areas) <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="dv">0</span></span>
+<span id="cb6-5"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-5" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-6" tabindex="-1"></a><span class="cf">for</span> region <span class="kw">in</span> regions:</span>
+<span id="cb6-7"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-7" tabindex="-1"></a>    <span class="cf">if</span> region.area <span class="op">&lt;</span> <span class="dv">50</span>:</span>
+<span id="cb6-8"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-8" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb6-9"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-9" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-10" tabindex="-1"></a>    area <span class="op">=</span> region.area</span>
+<span id="cb6-11"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-11" tabindex="-1"></a>    perimeter <span class="op">=</span> region.perimeter</span>
+<span id="cb6-12"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-12" tabindex="-1"></a>    shape_irregularity <span class="op">=</span> (perimeter<span class="op">**</span><span class="dv">2</span>) <span class="op">/</span> (<span class="dv">4</span> <span class="op">*</span> np.pi <span class="op">*</span> area) <span class="cf">if</span> area <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="dv">0</span></span>
+<span id="cb6-13"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-13" tabindex="-1"></a>    intensity <span class="op">=</span> region.intensity_mean</span>
+<span id="cb6-14"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-14" tabindex="-1"></a>    eccentricity <span class="op">=</span> region.eccentricity</span>
+<span id="cb6-15"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-15" tabindex="-1"></a>    solidity <span class="op">=</span> region.solidity</span>
+<span id="cb6-16"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-16" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-17" tabindex="-1"></a>    minr, minc, maxr, maxc <span class="op">=</span> region.bbox</span>
+<span id="cb6-18"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-18" tabindex="-1"></a>    patch <span class="op">=</span> blur[minr:maxr, minc:maxc]</span>
+<span id="cb6-19"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-19" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-20" tabindex="-1"></a>    <span class="cf">if</span> patch.size <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb6-21"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-21" tabindex="-1"></a>        contrast <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-22"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-22" tabindex="-1"></a>        homogeneity <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-23"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-23" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb6-24"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-24" tabindex="-1"></a>        patch <span class="op">=</span> patch.astype(np.uint8)</span>
+<span id="cb6-25"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-25" tabindex="-1"></a>        glcm <span class="op">=</span> graycomatrix(patch, distances<span class="op">=</span>[<span class="dv">1</span>], angles<span class="op">=</span>[<span class="dv">0</span>],</span>
+<span id="cb6-26"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-26" tabindex="-1"></a>                            levels<span class="op">=</span><span class="dv">256</span>, symmetric<span class="op">=</span><span class="va">True</span>, normed<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-27"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-27" tabindex="-1"></a>        contrast <span class="op">=</span> graycoprops(glcm, <span class="st">&#39;contrast&#39;</span>)[<span class="dv">0</span>, <span class="dv">0</span>]</span>
+<span id="cb6-28"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-28" tabindex="-1"></a>        homogeneity <span class="op">=</span> graycoprops(glcm, <span class="st">&#39;homogeneity&#39;</span>)[<span class="dv">0</span>, <span class="dv">0</span>]</span>
+<span id="cb6-29"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-29" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-30" tabindex="-1"></a>    f <span class="op">=</span> [area, perimeter, intensity, eccentricity, solidity,</span>
+<span id="cb6-31"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-31" tabindex="-1"></a>         shape_irregularity, contrast, homogeneity, size_variance]</span>
+<span id="cb6-32"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-32" tabindex="-1"></a>    features.append(f)</span></code></pre></div>
 <p>De uitkomst is een dataframe met kenmerken per cel, dat als input dient voor een machine learning-model.</p>
 </div>
-<div id="stap-6-machine-learning-trainen-op-een-dataset" class="section level3 hasAnchor" number="3.3.5">
-<h3><span class="header-section-number">3.3.5</span> Stap 6 – Machine learning: trainen op een dataset<a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-6-machine-learning-trainen-op-een-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="stap-6-machine-learning-trainen-op-een-dataset" class="section level3 hasAnchor" number="3.3.6">
+<h3><span class="header-section-number">3.3.6</span> Stap 6 – Machine learning: trainen op een dataset<a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-6-machine-learning-trainen-op-een-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Om te leren of cellen normaal of afwijkend zijn, wordt het model getraind op een grote dataset met microscopische afbeeldingen van patiënten met en zonder borstkanker. Het model leert zo welke combinatie van kenmerken op kanker wijst:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-1" tabindex="-1"></a>X <span class="op">=</span> np.array(features)</span>
-<span id="cb6-2"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-2" tabindex="-1"></a>y <span class="op">=</span> np.array(labels)</span>
-<span id="cb6-3"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-3" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-4" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.2</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
-<span id="cb6-5"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-5" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-6" tabindex="-1"></a>model <span class="op">=</span> RandomForestClassifier(n_estimators<span class="op">=</span><span class="dv">100</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
-<span id="cb6-7"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-7" tabindex="-1"></a>model.fit(X_train, y_train)</span>
-<span id="cb6-8"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-8" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-9" tabindex="-1"></a>y_pred <span class="op">=</span> model.predict(X_test)</span>
-<span id="cb6-10"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb6-10" tabindex="-1"></a><span class="bu">print</span>(classification_report(y_test, y_pred))</span></code></pre></div>
-</div>
-<div id="stap-7-voorspelling-op-nieuwe-afbeeldingen" class="section level3 hasAnchor" number="3.3.6">
-<h3><span class="header-section-number">3.3.6</span> Stap 7 – Voorspelling op nieuwe afbeeldingen<a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-7-voorspelling-op-nieuwe-afbeeldingen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Het getrainde model wordt vervolgens losgelaten op nieuwe, voorbewerkte afbeeldingen. Per afbeelding wordt op basis van de gemiddelde celclassificatie bepaald of er sprake is van kanker:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-1" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(features) <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb7-2"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-2" tabindex="-1"></a>    <span class="cf">continue</span></span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-1" tabindex="-1"></a>X <span class="op">=</span> np.array(features)</span>
+<span id="cb7-2"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-2" tabindex="-1"></a>y <span class="op">=</span> np.array(labels)</span>
 <span id="cb7-3"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-3" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-4" tabindex="-1"></a>X <span class="op">=</span> np.array(features)</span>
-<span id="cb7-5"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-5" tabindex="-1"></a>preds <span class="op">=</span> model.predict(X)</span>
-<span id="cb7-6"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-6" tabindex="-1"></a>final <span class="op">=</span> <span class="bu">int</span>(np.<span class="bu">round</span>(np.mean(preds)))</span>
-<span id="cb7-7"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-7" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-8" tabindex="-1"></a><span class="cf">if</span> final <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb7-9"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-9" tabindex="-1"></a>    result <span class="op">=</span> <span class="st">&quot;cancer&quot;</span></span>
-<span id="cb7-10"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-10" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb7-11"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-11" tabindex="-1"></a>    result <span class="op">=</span> <span class="st">&quot;normal&quot;</span></span>
-<span id="cb7-12"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-12" tabindex="-1"></a></span>
-<span id="cb7-13"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-13" tabindex="-1"></a>results.append((<span class="bu">file</span>, result))</span>
-<span id="cb7-14"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-14" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">file</span>, <span class="st">&quot;→&quot;</span>, result)</span></code></pre></div>
+<span id="cb7-4"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-4" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.2</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb7-5"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-5" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-6" tabindex="-1"></a>model <span class="op">=</span> RandomForestClassifier(n_estimators<span class="op">=</span><span class="dv">100</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb7-7"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-7" tabindex="-1"></a>model.fit(X_train, y_train)</span>
+<span id="cb7-8"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-8" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-9" tabindex="-1"></a>y_pred <span class="op">=</span> model.predict(X_test)</span>
+<span id="cb7-10"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb7-10" tabindex="-1"></a><span class="bu">print</span>(classification_report(y_test, y_pred))</span></code></pre></div>
 </div>
-<div id="resultaat" class="section level3 hasAnchor" number="3.3.7">
-<h3><span class="header-section-number">3.3.7</span> Resultaat<a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#resultaat" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="stap-7-voorspelling-op-nieuwe-afbeeldingen" class="section level3 hasAnchor" number="3.3.7">
+<h3><span class="header-section-number">3.3.7</span> Stap 7 – Voorspelling op nieuwe afbeeldingen<a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#stap-7-voorspelling-op-nieuwe-afbeeldingen" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Het getrainde model wordt vervolgens losgelaten op nieuwe, voorbewerkte afbeeldingen. Per afbeelding wordt op basis van de gemiddelde celclassificatie bepaald of er sprake is van kanker:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb8-1" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(features) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb8-2"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb8-2" tabindex="-1"></a>    <span class="cf">continue</span></span>
+<span id="cb8-3"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb8-3" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb8-4" tabindex="-1"></a>X <span class="op">=</span> np.array(features)</span>
+<span id="cb8-5"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb8-5" tabindex="-1"></a>preds <span class="op">=</span> model.predict(X)</span>
+<span id="cb8-6"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb8-6" tabindex="-1"></a>final <span class="op">=</span> <span class="bu">int</span>(np.<span class="bu">round</span>(np.mean(preds)))</span>
+<span id="cb8-7"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb8-7" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb8-8" tabindex="-1"></a><span class="cf">if</span> final <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb8-9"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb8-9" tabindex="-1"></a>    result <span class="op">=</span> <span class="st">&quot;cancer&quot;</span></span>
+<span id="cb8-10"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb8-10" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb8-11"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb8-11" tabindex="-1"></a>    result <span class="op">=</span> <span class="st">&quot;normal&quot;</span></span>
+<span id="cb8-12"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb8-12" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb8-13" tabindex="-1"></a>results.append((<span class="bu">file</span>, result))</span>
+<span id="cb8-14"><a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#cb8-14" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">file</span>, <span class="st">&quot;→&quot;</span>, result)</span></code></pre></div>
+</div>
+<div id="resultaat" class="section level3 hasAnchor" number="3.3.8">
+<h3><span class="header-section-number">3.3.8</span> Resultaat<a href="data-science-for-biology-celidentificatie-met-beeldanalyse.html#resultaat" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Het programma geeft per afbeelding een duidelijke uitkomst:</p>
 <pre><code>OVERZICHT:
 afbeelding1.tif : normal
 afbeelding2.tif : cancer
 ...</code></pre>
+<p><img src="portfolio_files/figure-html/betrouwbaarheid-1.png" alt="" width="672" />
+Het diagram toont de prestaties van een kankerdetectiemodel met vier mogelijke uitkomsten. Wanneer er geen kanker aanwezig is, wordt dit in de meeste gevallen correct herkend. Een klein deel wordt onterecht als kanker aangeduid. Wanneer er wel kanker aanwezig is, wordt dit meestal correct gedetecteerd, maar soms gemist. Deze fouttypes zijn belangrijk omdat vooral gemiste gevallen (false negatives) in medische toepassingen grote gevolgen kunnen hebben.</p>
 <hr />
 </div>
 </div>
