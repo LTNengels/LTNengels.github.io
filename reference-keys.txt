@@ -22,7 +22,6 @@ week-3-feature-extractie
 week-4-identificatie-en-visualisatie
 uitvoering
 stap-1-bibliotheken-importeren
-stap-2-afbeelding-laden
 stap-3-preprocessing
 stap-4-segmentatie
 stap-5-feature-extractie
